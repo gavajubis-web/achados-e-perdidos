@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Menu | Achados e Perdidos</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="topbar">
+
+            <div class="brand">
+                <div class="brand-icon">🔎</div>
+                <span>Achados e Perdidos</span>
+            </div>
+
+            <button onclick="window.location.href='index.html'">
+                Sair
+            </button>
+        </div>
+
+        <section class="container-header">
+
+            <h2>O que você deseja fazer?</h2>
+
+            <p class="subtitle">
+                Escolha uma opção para continuar.
+            </p>
+
+        </section>
+
+        <section class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🔍
+                </div>
+
+                <h3>Perdi algo</h3>
+
+                <p>
+                    Consulte os objetos encontrados e veja
+                    se alguém encontrou aquilo que você perdeu.
+                </p>
+
+                <button onclick="window.location.href='perdidos.html'">
+                    Procurar objeto
+                </button>
+            </div>
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📦
+                </div>
+
+                <h3>Encontrei algo</h3>
+
+                <p>
+                    Registre um objeto encontrado para ajudar
+                    o dono a recuperá-lo.
+                </p>
+
+                <button onclick="window.location.href='encontrados.html'">
+                    Registrar objeto
+                </button>
+
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            Sistema de Achados e Perdidos
+        </footer>
+
+    </main>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>

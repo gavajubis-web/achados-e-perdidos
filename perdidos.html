@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Objetos Encontrados | Achados e Perdidos</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="topbar">
+
+            <div class="brand">
+                <div class="brand-icon">🔍</div>
+                <span>Objetos encontrados</span>
+            </div>
+
+            <button onclick="window.location.href='menu.html'">
+                Voltar
+            </button>
+
+        </div>
+
+        <section class="container-header">
+
+            <h2>Objetos encontrados</h2>
+
+            <p class="subtitle">
+                Procure abaixo pelo objeto que você perdeu.
+            </p>
+
+        </section>
+
+        <div class="search-area">
+
+            <input
+                type="search"
+                id="pesquisa"
+                placeholder="🔎  Pesquisar objeto ou local..."
+                autocomplete="off"
+            >
+
+        </div>
+
+        <p
+            id="resultadoInfo"
+            class="resultado-info"
+        ></p>
+
+        <div id="lista">
+
+            <div class="loading">
+
+                <div class="spinner"></div>
+
+                <span>
+                    Carregando objetos...
+                </span>
+
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            Encontrou o que procurava? 💚
+        </footer>
+
+    </main>
+
+    <!-- MODAL DE CONFIRMAÇÃO -->
+
+    <div
+        id="modalConfirmacao"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <h3>Encontrou seu objeto?</h3>
+
+            <p>
+                Ao confirmar, o objeto será reservado e
+                retirado da lista de objetos disponíveis.
+                Procure a coordenação para finalizar a retirada.
+            </p>
+
+            <div class="modal-actions">
+
+                <button
+                    class="btn-secundario"
+                    onclick="fecharModal()"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    onclick="confirmarRetirada()"
+                    id="btnConfirmar"
+                >
+                    Sim, é meu
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>

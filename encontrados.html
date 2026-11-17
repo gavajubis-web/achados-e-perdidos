@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Registrar Objeto | Achados e Perdidos</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="topbar">
+
+            <div class="brand">
+                <div class="brand-icon">📦</div>
+                <span>Registrar objeto</span>
+            </div>
+
+            <button onclick="window.location.href='menu.html'">
+                Voltar
+            </button>
+
+        </div>
+
+        <div class="form-card">
+
+            <div class="container-header">
+
+                <h2>Registrar objeto</h2>
+
+                <p class="subtitle">
+                    Preencha as informações abaixo para
+                    cadastrar um objeto encontrado.
+                </p>
+
+            </div>
+
+            <form id="formObjeto">
+
+                <div class="form-group">
+
+                    <label for="objeto">
+                        Nome do objeto
+                    </label>
+
+                    <input
+                        type="text"
+                        id="objeto"
+                        placeholder="Ex.: Lápis azul"
+                        maxlength="100"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="local">
+                        Local onde foi encontrado
+                    </label>
+
+                    <input
+                        type="text"
+                        id="local"
+                        placeholder="Ex.: Sala 03"
+                        maxlength="150"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="imagem">
+                        Foto do objeto
+                    </label>
+
+                    <input
+                        type="file"
+                        id="imagem"
+                        accept="image/*"
+                        required
+                    >
+
+                    <small>
+                        Escolha uma foto clara do objeto.
+                    </small>
+
+                    <div
+                        id="previewContainer"
+                        class="preview-container"
+                    >
+                        <img
+                            id="previewImagem"
+                            alt="Pré-visualização do objeto"
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        class="btn-voltar"
+                        onclick="voltar()"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        id="btnSalvar"
+                    >
+                        Salvar objeto
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <footer class="footer">
+            Obrigado por ajudar a devolver objetos aos seus donos. 💚
+        </footer>
+
+    </main>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
